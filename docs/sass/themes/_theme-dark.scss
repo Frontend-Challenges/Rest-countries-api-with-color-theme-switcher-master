@@ -1,0 +1,25 @@
+$backgroundElements: hsl(209, 23%, 22%);
+$backgroundBody: hsl(207, 26%, 17%);
+$textColor: hsl(0, 0%, 100%);
+$boxShadowColor: #3523237a;
+
+$backgroundElements--light: hsl(0, 0%, 100%);
+$backgroundBody--light: hsl(0, 0%, 98%);
+$textColor--light: hsl(200, 15%, 8%);
+$boxShadowColor--light: #e8e8e8;
+
+.theme {
+  &--dark {
+    --backgroundElements: #{$backgroundElements};
+    --backgroundBody: #{$backgroundBody};
+    --textColor: #{$textColor};
+    --boxShadowColor: #{$boxShadowColor};
+  }
+
+  &--light {
+    --backgroundElements: #{$backgroundElements--light};
+    --backgroundBody: #{$backgroundBody--light};
+    --textColor: #{$textColor--light};
+    --boxShadowColor: #{$boxShadowColor--light};
+  }
+}

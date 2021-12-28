@@ -1,0 +1,46 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+@use "../themes/theme-dark" as *;
+
+.search {
+  align-items: center;
+  background-color: var(--backgroundElements);
+  display: flex;
+  padding-left: 2.4rem;
+  gap: 2.4rem;
+
+  &__icon {
+    height: 2.1rem;
+    width: 2.1rem;
+  }
+
+  &__label {
+    cursor: pointer;
+    transition: transform 0.3s;
+
+    &:active {
+      transform: translateY(0.5rem);
+    }
+  }
+
+  &__input {
+    border: none;
+    background-color: transparent;
+    display: inline-block;
+    color: $inputTextColor;
+    font-size: 1.4rem;
+    text-indent: 0.8rem;
+    padding: 2rem 0;
+    outline: none;
+    width: 100%;
+
+    &::placeholder {
+      color: $inputTextColor;
+      font-size: 1.4rem;
+    }
+  }
+
+  @include from(1440px) {
+    flex-basis: 35%;
+  }
+}

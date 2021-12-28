@@ -1,0 +1,14 @@
+@use "../abstracts/mixins" as *;
+
+.heading {
+  font-weight: 300;
+
+  &--primary {
+    font-size: 1.6rem;
+    font-weight: 800;
+
+    @include from(768px) {
+      font-size: 2rem;
+    }
+  }
+}

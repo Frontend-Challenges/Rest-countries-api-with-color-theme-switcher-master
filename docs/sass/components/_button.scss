@@ -1,0 +1,34 @@
+@use "../abstracts/variables" as *;
+@use "../themes/theme-dark.scss" as *;
+
+.button {
+  border: none;
+  display: inline-block;
+  color: var(--textColor);
+  text-decoration: none;
+  padding: 0.6rem 2rem;
+
+  &--back {
+    margin: 3.6rem 0 0 0;
+  }
+
+  &--primary {
+    align-items: center;
+    background-color: var(--backgroundElements);
+    display: inline-flex;
+    font-weight: 300;
+    justify-content: space-between;
+    gap: 0.8rem;
+  }
+
+  &--shadow {
+    box-shadow: 0 0 0.6rem var(--boxShadowColor);
+    border: 1px solid var(--boxShadowColor);
+  }
+
+  &__icon {
+    height: 1.6rem;
+    stroke: var(--textColor);
+    width: 1.6rem;
+  }
+}

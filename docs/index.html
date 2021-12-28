@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/main.css">
+    <title>REST Countries API</title>
+</head>
+<body>
+    <header class="header shadow-principal">
+        <navigation class="navigation container">
+            <h1 class="heading heading--primary">Where in the world?</h1>
+            <div class="dark-mode">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+                </svg>
+                <span>Dark Mode</span>
+            </div>
+        </navigation>
+    </header>
+    <main class="main">
+        <section class="section-search">
+            <div class="container section-filter">
+                <div class="search border-radius-4 shadow-principal">
+                    <label class="search__label" for="search">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="search__icon" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                        </svg>
+                    </label>
+                    <input class="search__input" type="text" id="search" placeholder="Search for a country...">
+                </div>
+                <details class="filter filter--w-65 border-radius-4 shadow-principal">
+                    <summary class="filter__title">
+                        <input class="filter__radio" type="radio" name="region" id="africa" title="Africa">
+                        <input class="filter__radio" type="radio" name="region" id="america" title="America">
+                        <input class="filter__radio" type="radio" name="region" id="asia" title="Asia">
+                        <input class="filter__radio" type="radio" name="region" id="europe" title="Europe">
+                        <input class="filter__radio" type="radio" name="region" id="oceania" title="Oceania">
+                        <span>
+                            Filter By Region
+                        </span>
+                    </summary>
+                    <ul class="filter__list border-radius-4 shadow-principal">
+                        <li class="filter__list-item">
+                            <label for="africa">Africa</label>
+                        </li>
+                        <li class="filter__list-item">
+                            <label for="america">America</label>
+                        </li>
+                        <li class="filter__list-item">
+                            <label for="asia">Asia</label>
+                        </li>
+                        <li class="filter__list-item">
+                            <label for="europe">Europe</label>
+                        </li>
+                        <li class="filter__list-item">
+                            <label for="oceania">Oceania</label>
+                        </li>
+                    </ul>
+                </details>
+            </div>
+        </section>
+        <section class="section-countries">
+            <div class="container container-countries">
+
+            </div>
+        </section>
+    </main>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="./js/index.js" type="module"></script>
+</body>
+</html>

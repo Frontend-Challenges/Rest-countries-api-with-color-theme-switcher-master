@@ -1,0 +1,55 @@
+@use "../abstracts/mixins" as *;
+@use "../themes/theme-dark.scss" as *;
+
+.country-card {
+  background-color: var(--backgroundElements);
+  margin: 0 auto;
+  max-width: 100%;
+  transition: all 0.3s;
+
+  &:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+  }
+
+  &__image {
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    height: 18rem;
+    max-width: 28rem;
+    width: 100%;
+  }
+
+  &__body {
+    padding: 2.4rem;
+
+    @include from(1440px) {
+      padding: 2rem 2.4rem 3.6rem 2.4rem;
+    }
+  }
+
+  &__title {
+    font-size: 1.8rem;
+    font-weight: 900;
+    margin-bottom: 1.6rem;
+  }
+
+  &__list {
+    list-style: none;
+  }
+
+  &__list-item {
+    font-weight: 600;
+    span {
+      font-weight: 300;
+    }
+  }
+
+  &__list-item:not(:last-child) {
+    margin-bottom: 0.6rem;
+  }
+
+  @include from(1440px) {
+    width: 100%;
+  }
+}

@@ -1,0 +1,9 @@
+@use "../abstracts/mixins" as *;
+
+.section-filter {
+  @include from(1440px) {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+  }
+}

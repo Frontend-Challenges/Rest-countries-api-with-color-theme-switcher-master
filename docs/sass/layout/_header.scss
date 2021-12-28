@@ -1,0 +1,7 @@
+@use "../abstracts/variables" as *;
+@use "../themes/theme-dark.scss" as *;
+
+.header {
+    background-color: var(--backgroundElements);
+    padding: 2.4rem 0;
+}

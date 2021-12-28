@@ -1,0 +1,115 @@
+@use "../abstracts/mixins" as *;
+@use "../abstracts/variables" as *;
+@use "../themes/theme-dark" as *;
+
+.filter {
+  background-color: var(--backgroundElements);
+  font-weight: 600;
+  position: relative;
+  margin-top: 3.6rem;
+
+  &--w-65 {
+    width: 65%;
+  }
+
+  [open] &__title::after {
+    transform: rotate(45deg) translate(0%, -50%);
+  }
+
+  &__title {
+    cursor: pointer;
+    padding: 2rem 2.4rem;
+    position: relative;
+
+    &--hidden-span {
+      span {
+        opacity: 0;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+      }
+    }
+
+    &--hidden-input {
+      summary > input::after {
+        content: none;
+      }
+
+      span {
+        opacity: 1;
+        position: relative;
+      }
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      right: 2.4rem;
+      top: 50%;
+      display: inline-block;
+      width: 0.8rem;
+      height: 0.8rem;
+      border-bottom: 1px solid currentColor;
+      border-left: 1px solid currentColor;
+      border-bottom-left-radius: 2px;
+      transform: rotate(-45deg) translate(50%, -50%);
+      transform-origin: center center;
+      transition: transform ease-in-out 100ms;
+    }
+
+    &::-webkit-details-marker,
+    &::marker {
+      content: "";
+      display: none;
+    }
+  }
+
+  &__radio {
+    appearance: none;
+    display: none;
+    counter-increment: radios;
+    color: var(--textColor);
+
+    &:checked {
+      display: inline-block;
+    }
+
+    &::after {
+      content: attr(title);
+      display: inline;
+      font-size: 1.4rem;
+    }
+  }
+
+  &__list {
+    background-color: var(--backgroundElements);
+    box-sizing: border-box;
+    counter-reset: labels;
+    position: absolute;
+    top: calc(100% + 0.5rem);
+    left: 0;
+    padding: 2rem 2.4rem;
+    margin: 0;
+    list-style: none;
+    overflow-y: auto;
+    width: 100%;
+
+    &-item:not(:last-child) {
+      margin-bottom: 0.8rem;
+    }
+
+    label {
+      display: block;
+      cursor: pointer;
+      width: 100%;
+    }
+  }
+
+  @include from(1440px) {
+    flex-basis: 20%;
+    margin-top: 0;
+    width: auto;
+  }
+}

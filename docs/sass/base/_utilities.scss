@@ -1,0 +1,20 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+.container {
+  max-width: 130rem;
+  margin: 0 auto;
+  width: 90%;
+
+  @include from(1440px) {
+    width: 100%;
+  }
+}
+
+.border-radius-4 {
+  border-radius: 4px;
+}
+
+.shadow-principal {
+  box-shadow: 0 0 1.6rem var(--boxShadowColor);
+}

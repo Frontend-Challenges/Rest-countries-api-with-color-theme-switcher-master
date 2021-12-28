@@ -1,0 +1,25 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+.dark-mode {
+  align-items: center;
+  display: flex;
+  cursor: pointer;
+  font-weight: 600;
+  gap: 0.6rem;
+
+  svg {
+    stroke: var(--textColor);
+    height: 1.8rem;
+    width: 1.8rem;
+
+    @include from(1440px) {
+      height: 2rem;
+      width: 2rem;
+    }
+
+    path {
+      fill: $white;
+    }
+  }
+}
